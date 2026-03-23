@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>quiXzoom OG Image Preview</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #0A0A1B;
+      color: #E2E8F0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+
+    .bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 80% at 100% 0%, rgba(37,99,235,0.2) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 60% at 0% 100%, rgba(124,58,237,0.15) 0%, transparent 55%);
+    }
+
+    .grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(37,99,235,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(37,99,235,0.05) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 0 100px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(37,99,235,0.15);
+      border: 1px solid rgba(37,99,235,0.35);
+      color: #3B82F6;
+      padding: 6px 16px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      background: #2563EB;
+      border-radius: 50%;
+    }
+
+    h1 {
+      font-size: 68px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      background: linear-gradient(135deg, #fff 40%, rgba(255,255,255,0.55) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 22px;
+      color: #94A3B8;
+      line-height: 1.5;
+      max-width: 620px;
+    }
+
+    .logo {
+      position: absolute;
+      bottom: 48px;
+      left: 100px;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: #E2E8F0;
+    }
+
+    .logo span {
+      color: #2563EB;
+    }
+
+    .wavult {
+      position: absolute;
+      bottom: 50px;
+      right: 100px;
+      font-size: 13px;
+      color: #64748B;
+      letter-spacing: 0.04em;
+    }
+
+    .divider {
+      position: absolute;
+      bottom: 80px;
+      left: 100px;
+      right: 100px;
+      height: 1px;
+      background: rgba(255,255,255,0.07);
+    }
+
+    /* Decorative dots */
+    .dot {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #2563EB;
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px rgba(37,99,235,0.2);
+    }
+
+    .dot:nth-child(1) { top: 120px; right: 200px; }
+    .dot:nth-child(2) { top: 200px; right: 350px; background: #7C3AED; box-shadow: 0 0 0 3px rgba(124,58,237,0.2); }
+    .dot:nth-child(3) { top: 320px; right: 150px; background: #7C3AED; box-shadow: 0 0 0 3px rgba(124,58,237,0.2); }
+    .dot:nth-child(4) { top: 400px; right: 280px; }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="grid"></div>
+
+  <!-- Decorative map dots -->
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+
+  <div class="content">
+    <div class="badge">
+      <div class="badge-dot"></div>
+      Wavult Group
+    </div>
+    <h1>The World's<br>Camera Network</h1>
+    <p>Earn by capturing. Gain by analyzing.</p>
+  </div>
+
+  <div class="divider"></div>
+  <div class="logo">qui<span>X</span>zoom</div>
+  <div class="wavult">quixzoom.com</div>
+</body>
+</html>
